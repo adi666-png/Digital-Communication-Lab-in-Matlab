@@ -1,0 +1,30 @@
+N = 10;
+n = -N:1:N;
+y = [zeros(1,N),ones(1,1),zeros(1,N)];
+subplot(4,1,1);
+stem(n,y);
+ylabel('amplitude');
+xlabel('number of samples---->');
+title('Discrete unit impulse signal');
+display(y);
+D = fft(y);
+A = abs(D);
+a = angle(D);
+I = ifft(D);
+display(A);
+display(a);
+subplot(4,1,2);
+stem(n,A);
+title('Magnitude Plot')
+ylabel('|X(k)|');
+xlabel('k');
+subplot(4,1,3);
+stem(n,a);
+title('Phase Plot')
+ylabel('<X(k)');
+xlabel('k');
+subplot(4,1,4);
+stem(n,I);
+ylabel('amplitude');
+xlabel('number of samples---->');
+title('Inverse DFT signal');
