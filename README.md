@@ -1,1 +1,1 @@
-# MatlabComm
+# Digital Communication Lab in MATLAB
